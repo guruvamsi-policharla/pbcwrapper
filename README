@@ -1,3 +1,15 @@
+MODIFIED PBC WRAPPER CLASSES LIBRARY
+
+This fork was made to make a modification to Zr.cc and Zr.h which
+is necessary to be compatible with the ZKProof-of-vertex-isolation
+repository. 
+
+Instructions for building remain the same as earlier.
+
+Changelog:
+Added an extra initialisation function to Zr.h as the original 
+pbcwrapper did not suppport the same.
+------------------------------------------------------------------------
 THE PBC WRAPPER CLASSES LIBARY
 
 Ben Lynn has developed the pairing-based cryptography (PBC) library,
