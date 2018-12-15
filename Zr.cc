@@ -28,6 +28,16 @@ Zr::Zr(const Pairing &e, long int i){
   }else throw UndefinedPairingException();
 }
 
+//Create an element from mpz_t 
+Zr::Zr(const Pairing &e, mpz_t i){
+  elementPresent = e.isPairingPresent();
+  if(elementPresent){
+	element_init_Zr(r, *(pairing_t*)&e.getPairing());
+	element_set_mpz(r,i);
+  }else throw UndefinedPairingException();
+}
+
+
 //Create an element from import
 //Traditional Import, bool is not imported
 Zr::Zr(const Pairing &e, const unsigned char *data, 
